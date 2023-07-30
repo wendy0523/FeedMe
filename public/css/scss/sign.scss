@@ -1,0 +1,92 @@
+//顏色
+$primary-color:#F3DF53;
+$secondary-color:#88572B;
+$green-color:#96BD40;
+$off-white-color:#FDFAEB;
+
+
+//清樣式
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+
+.body-img{
+    margin: 0;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-image: url(../../../img/pexels-gilberto-reyes-825949.jpg);
+}
+form{
+    padding: 0 1em;
+}
+.form-wrapper{
+    background-color: #F3DF53;
+    margin: 2em auto;
+    padding: 0 2em;
+    max-width: 350px;
+    border-radius: 8px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}    
+.form-wrapper>h1{
+    text-align: center;
+    padding: 1em 0;
+    color: #88572B;
+}
+.form-item{
+    width: 100%;
+    margin-bottom: 1em;
+}
+.form-item input{
+    background-color: #fff;
+    border: none;
+    border: 2px solid #FDFAEB;
+    height: 40px;
+    width: 100%;
+    border-radius: 3px;
+    font-size: 1em;
+    font-family: 'Noto Sans TC', sans-serif; 
+    transition: border-color 0.3s;
+}
+.form-item input:focus{
+    color:#88572B;
+    outline: none;
+}
+.button-item{
+    width: 100%;
+    margin: 2em 0 0;
+}
+.button-item .button{
+    height: 40px;
+    width: 100%;
+    background-color: #96BD40;
+    border: none;
+    color: #88572B;
+    border-radius: 3px;
+    font-size: 1em;
+    transition: background 0.3s ease-in-out;
+    font-family: 'Noto Sans TC', sans-serif; 
+}
+.button:hover{
+    background-color: #88572B;
+    color: #fff;
+}
+.form-footer{
+    text-align: center;
+    padding: 1.5em 0;
+    font-size: 1em;
+}
+.form-footer p{
+    margin: 10px;
+}
+.form-footer a{
+    transition: border-color 0.3s;
+    color: #88572B;
+}
+.form-footer a:hover{
+    border-bottom: 2px dotted #96BD40;
+}

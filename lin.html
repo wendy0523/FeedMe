@@ -1,0 +1,278 @@
+  <style>
+
+    .position-r {
+      position: relative;
+    }
+
+    .container {
+      max-width: 1440px;
+      margin: auto;
+      width: 80%;
+    }
+
+    #preloader {
+      background: #faedca url(../images/loader.gif) no-repeat center;
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      z-index: 100;
+    }
+
+    header {
+      width: 100%;
+      height: 85px;
+      padding-top: 15px;
+      position: fixed;
+      background: rgba(255, 255, 255, 0.9);
+      filter: drop-shadow(0px 5px 4px rgba(0, 0, 0, 0.1));
+      z-index: 99;
+    }
+
+    header > .container {
+      display: flex;
+    }
+
+    header > .container .logo > a > img {
+      width: 215px;
+    }
+
+    .icon-menu {
+      position: absolute;
+      right: 10px;
+      top: 15px;
+      display: none;
+    }
+
+    .icon-menu > ul > li > a {
+      padding: 10px;
+    }
+
+    header > .container > nav {
+      width: 65%;
+    }
+
+    .nav-main {
+      position: relative;
+      width: 100%;
+    }
+
+    .nav-main > ul {
+      display: flex;
+    }
+
+    header > .container nav > .nav-main > ul > li {
+      width: 25%;
+    }
+
+    header > .container .icon-right > ul {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    header > .container nav > .nav-main > ul > li > a {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding-top: 30px;
+      padding-bottom: 28px;
+      color: #3a3a3a;
+      font-size: 15px;
+      letter-spacing: 2px;
+      font-weight: 800;
+      line-height: 27px;
+    }
+
+    header > .container nav > .nav-main ul > li > a:hover {
+      color: #993838;
+    }
+
+    header > .container .icon-right > ul > li > a {
+      display: block;
+      width: 38px;
+    }
+
+    .submenu {
+      position: absolute;
+      background-color: #ffffff;
+      top: 85px;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.062));
+      display: none;
+    }
+
+    .submenu > li > a {
+      display: block;
+      line-height: 50px;
+      text-align: center;
+      font-size: 15px;
+      letter-spacing: 3px;
+      color: #3a3a3a;
+      padding: 10px 40px;
+    }
+
+    .submenu > li > a:hover {
+      color: #993838;
+      background-color: #fdf9ee;
+    }
+
+    .submember {
+      position: absolute;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.062));
+      display: none;
+    }
+
+    .submember > li > a {
+      color: #3a3a3a;
+      background-color: #ffffff;
+      display: block;
+      width: 150px;
+      text-align: center;
+      line-height: 60px;
+      font-size: 15px;
+    }
+
+    .submember > li > a:hover {
+      color: #993838;
+      background-color: #fdf9ee;
+    }
+    @media (max-width: 926px) {
+      .container {
+        width: 90%;
+        max-width: 926px;
+      }
+    
+      header {
+        height: 50px;
+        padding-top: 4px;
+      }
+    
+      header > .container .logo > a > img {
+        width: 140px;
+        margin-top: 0px;
+      }
+    
+      header > .container nav {
+        position: absolute;
+        top: 50px;
+        right: -20px;
+        width: 100%;
+        display: none;
+      }
+    
+      header > .container nav.active {
+        display: block;
+      }
+    
+      .nav-main > ul {
+        display: block;
+        background: rgba(255, 255, 255, 0.95);
+      }
+    
+      header > .container nav > .nav-main > ul > li {
+        width: 100%;
+      }
+    
+      header > .container nav > .nav-main > ul > li > a {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    
+      header > .container nav > .nav-main ul > li:hover {
+        background-color: #fdf9ee;
+      }
+    
+      .prev > img,
+    .next > img {
+        width: 60%;
+      }
+    
+      .dpn {
+        display: none;
+      }
+    
+      .icon-menu {
+        display: block;
+      }
+    
+      .submenu {
+        position: unset;
+        background-color: #ffffff;
+      }
+    
+      .submenu > li > a {
+        line-height: 35px;
+      }
+    
+      .submenu > li > a:hover {
+        background-color: #faedca;
+      }
+    
+      .submember {
+        top: 35px;
+      }
+    
+      .submember > li > a {
+        width: 164px;
+      }
+    
+      .wrap-white {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02), 0px -5px 4px rgba(0, 0, 0, 0.02);
+      }
+    
+      h1 {
+        font-size: 20px;
+        padding-bottom: 10px;
+      }
+    }
+  </style>
+
+    <div id="preloader" style="display: none;"></div>
+    <header>                              
+      <header class="container position-r"> 
+        <div class="logo"><a href="index.html">  <img src="public/images/linpatisserie_logo.svg" alt="linpatisserie_logo"></a></div>
+        <div class="icon-menu">
+          <ul class="row">
+            <li>  <a id="phoneicom-search-swith" href="#"> <img src="public/images/icon_search.svg" alt="icon_search">
+                <ul class="sub-search" id="phoneicom-search"></ul>
+                <li class="serch-overlay"></li></a></li>
+            <li class="position-r">    <a id="phoneicom-member-swith" href="javascript:;"> <img src="public/images/icon_member.svg" alt="icon_member">
+                <ul class="submember" id="phoneicom-member">
+                  <li><a href="login_register.html">登入/註冊</a></li>
+                  <li><a href="#">會員中心</a></li>
+                  <li><a href="#">訂單查詢</a></li>
+                  <li><a href="#">收藏清單 </a></li>
+                </ul></a></li>
+            <li>   <a class="icon_shoppingcar" href="#"> <img src="public/images/icon_shoppingcar.svg" alt="icon_shoppingcar"></a></li>
+            <li><a id="btn-nav-toggle" href="javascript:;"><img src="public/images/icon-menu.svg" alt=""></a></li>
+          </ul>
+        </div>
+        <nav id="primary-navigation"> 
+          <div class="nav-main">
+            <ul> 
+              <li> <a href="news.html">NEWS</a></li>
+              <li><a href="about.html">ABOUT </a></li>
+              <li id="product-nav-swith"><a class="position-r" href="product.html">PRODUCT</a></li>
+              <li> <a href="store.html">STORE </a></li>
+              <li> <a href="faq.html">FAQ </a></li>
+            </ul>
+          </div>
+          <div class="icon-right">
+            <ul class="row dpn">
+              <li><a class="icom-facebook" href="#"> <img src="public/images/icon_facebook.svg" alt="icon_facebook"></a></li>
+              <li>  <a class="icom-search" href="#"> <img src="public/images/icon_search.svg" alt="icon_search"></a>
+                <ul class="sub-search"></ul>
+                <li class="serch-overlay"></li>
+              </li>
+              <li class="position-r" id="icom-member-swith">   <a href="javascript:;"><img src="public/images/icon_member.svg" alt="icon_member"></a>
+                <ul class="submember" id="member-list">
+                  <li><a href="login_register.html">登入/註冊</a></li>
+                  <li><a href="#">會員中心</a></li>
+                  <li><a href="#">訂單查詢</a></li>
+                  <li><a href="#">收藏清單 </a></li>
+                </ul>
+              </li>
+              <li>   <a class="icon_shoppingcar" href="#"> <img src="public/images/icon_shoppingcar.svg" alt="icon_shoppingcar"></a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>    

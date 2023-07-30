@@ -1,0 +1,181 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title FeedMe
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Itim&display=swap' rel='stylesheet')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap' rel='stylesheet')
+    link(rel='stylesheet', href='public/css/styles.css')
+  body 
+    header
+        .container-header
+          .row
+            h1 
+              a(href="index.html")
+                img.img-fluid(src="../../img/feedme-logo.svg", alt="")
+            a#btn-nav-toggle.icon-menu(href="#")
+              i.fa-solid.fa-bars.fa-2xl(style='color: #78992f;')
+            nav#primary-navigation 
+              ul 
+                li
+                  a(href="aboutus.html") 關於我們
+                    ul.submenu 
+                      li
+                        a(href="new.html") 最新消息
+                li
+                  a(href="#") 全部商品
+                    ul.submenu 
+                      li
+                        a(href="dog.html") 汪汪鮮食
+                      li
+                        a(href="cat.html") 貓咪鮮食
+                li
+                  a(href="faq.html") 常見問題
+                .icon-none-2
+                  li
+                    a(href="sign_in.html") 會員登入
+                  li
+                    a(href="sign_new.html") 會員註冊
+                  li
+                    a(href="#") 信箱詢問
+                  li
+                    a(href="faq.html") 購物車
+                .icon-none  
+                  li.relative
+                    a(href="sign_in.html") 
+                      img.img-fluid(src="../../img/user.svg", alt="")
+                    ul.submenu-w
+                      li
+                        a(href="sign_in.html") 會員登入
+                      li
+                        a(href="sign_new.html") 會員註冊
+                  li
+                    button.button-contact(type='button' onclick="document.getElementById('id01').style.display='block'" style='width: auto;')
+                      img(src="../../img/Contact-us.svg" alt='')
+                  li
+                    a(href="#") 
+                      img.img-fluid(src="../../img/shopping.svg", alt="")
+    img.img-fluid.mb-3(src="../../img/fatty-corgi-1QsQRkxnU6I-unsplash.jpg", alt="")
+    .container 
+        ul.breadcrumb.mb-3 
+            li  
+                a(href="index.html") 首頁
+            li 
+                a(href="dog.html") &nbsp&nbsp 狗狗鮮食  
+    main.page-top-position
+      .product-title.row.text-center
+        h2.col-12 狗狗鮮食
+      section.product-section-1
+        .container
+            .product
+                ul.product-item.text-center.row
+                    li.col-12.col-md-4
+                        .img-overlay
+                          a(href="")
+                              img.img-fluid.img-rounded(src="../../img/product.png", alt="")
+                        h3 鮮嫩牛肉
+                        p  NT$109 
+                        a.product-shopping.img-rounded(href="") 加入購物車 
+                    li.col-12.col-md-4
+                        .img-overlay
+                          a(href="")
+                              img.img-fluid.img-rounded(src="../../img/product.png", alt="")
+                        h3 鮮嫩雞肉
+                        p  NT$209 
+                        a.product-shopping.img-rounded(href="") 加入購物車 
+                    li.col-12.col-md-4
+                        .img-overlay
+                          a(href="")
+                              img.img-fluid.img-rounded(src="../../img/product.png", alt="")
+                        h3 黑松露牛
+                        p  NT$609 
+                        a.product-shopping.img-rounded(href="") 加入購物車 
+                    li.col-12.col-md-4
+                        .img-overlay
+                          a(href="")
+                              img.img-fluid.img-rounded(src="../../img/product.png", alt="")
+                        h3 海陸雙拼
+                        p  NT$189 
+                        a.product-shopping.img-rounded(href="") 加入購物車 
+                    li.col-12.col-md-4
+                        .img-overlay
+                          a(href="")
+                              img.img-fluid.img-rounded(src="../../img/product.png", alt="")
+                        h3 牛雞綜合
+                        p  NT$209 
+                        a.product-shopping.img-rounded(href="") 加入購物車 
+                    li.col-12.col-md-4
+                        .img-overlay
+                          a(href="")
+                              img.img-fluid.img-rounded(src="../../img/product.png", alt="")
+                        h3 鮮嫩羊羊
+                        p  NT$159 
+                        a.product-shopping.img-rounded(href="") 加入購物車 
+    footer
+        .container
+          //- .row-nowrap.col-12.flex-center
+          //-   a(href="")
+          //-     img.img-fluid(src="../../img/FeedMe_logo_white-05.png", alt="")
+          .row-nowrap.footer-list 
+            dl.col-12.col-md-3 
+              dt 
+                a(href="#") FEEDME  
+              dd 
+                a(href="aboutus.html") 關於我們
+              dd 
+                a(href="new.html") 最新消息
+            dl.col-12.col-md-3 
+              dt 
+                a(href="#") 全部商品  
+              dd 
+                a(href="dog.html") 狗狗鮮食
+              dd 
+                a(href="cat.html") 貓咪鮮食            
+            dl.col-12.col-md-3 
+              dd
+                a 客服時間:週一至週五 8:30-5:30 
+              dd
+                a 客服專線:(04) 2327-2522  
+              dd
+                a 聯絡信箱:FeedMe@gmail.com  
+            dl.col-12.col-md-3 
+              dt 
+                a(href="faq.html") FAQ 
+              dd 
+                a(href="faq.html") 常見問題
+              dd 
+                a(href="#") 購物須知
+            dl.col-12.col-md-3 
+              dt 
+                a 社群平台 
+              dd  
+                a(href="#")
+                  img(src="../../img/ig.png", alt="")
+                a(href="#")
+                  img(src="../../img/fb.png", alt="")
+                a(href="#")
+                  img(src="../../img/line.png", alt="")
+    a.page-top(href='javascript:;') TOP
+    script(src='https://code.jquery.com/jquery-3.6.0.min.js' integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=' crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js')
+    script(src='https://kit.fontawesome.com/99f06fddac.js' crossorigin='anonymous')
+    //- script(src='public/js/WOW-master/dist/wow.min.js')
+    script(src="../public/js/script.js") 
+              
+
+
+
+
+ 
+         
+
+
+
+
+      

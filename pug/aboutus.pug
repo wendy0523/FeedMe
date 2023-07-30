@@ -1,0 +1,204 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title FeedMe
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Itim&display=swap' rel='stylesheet')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap' rel='stylesheet')
+    link(rel='stylesheet', href='public/css/styles.css')
+  body 
+    header
+        .container-header
+          .row
+            h1 
+              a(href="index.html")
+                img.img-fluid(src="../../img/feedme-logo.svg", alt="")
+            a#btn-nav-toggle.icon-menu(href="#")
+              i.fa-solid.fa-bars.fa-2xl(style='color: #78992f;')
+            nav#primary-navigation 
+              ul 
+                li
+                  a(href="aboutus.html") 關於我們
+                    ul.submenu 
+                      li
+                        a(href="new.html") 最新消息
+                li
+                  a(href="#") 全部商品
+                    ul.submenu 
+                      li
+                        a(href="dog.html") 汪汪鮮食
+                      li
+                        a(href="cat.html") 貓咪鮮食
+                li
+                  a(href="faq.html") 常見問題
+                .icon-none-2
+                  li
+                    a(href="sign_in.html") 會員登入
+                  li
+                    a(href="sign_new.html") 會員註冊
+                  li
+                    a(href="#") 信箱詢問
+                  li
+                    a(href="faq.html") 購物車
+                .icon-none  
+                  li.relative
+                    a(href="sign_in.html") 
+                      img.img-fluid(src="../../img/user.svg", alt="")
+                    ul.submenu-w
+                      li
+                        a(href="sign_in.html") 會員登入
+                      li
+                        a(href="sign_new.html") 會員註冊
+                  li
+                    button.button-contact(type='button' onclick="document.getElementById('id01').style.display='block'" style='width: auto;')
+                      img(src="../../img/Contact-us.svg" alt='')
+                  li
+                    a(href="#") 
+                      img.img-fluid(src="../../img/shopping.svg", alt="")
+    #id01.modal
+      form.modal-contact.animate(action='/action_page.php' method='post')
+        .imgcontainer
+          span.close(onclick="document.getElementById('id01').style.display='none'" title='Close Modal') &times;
+          img.avatar.img-fluid(src='../../img/feedme-logo.svg' alt='Avatar')
+        .container-contact
+          label(for='uname')
+            b 姓名
+          input(type='text' placeholder='請輸入姓名' name='uname' required='')
+          label(for='email')
+            b 電子信箱
+          input(type='email' placeholder='請輸入電子信箱帳號' name='email' required='')
+          label(for='tel')
+            b 連絡電話
+          input(type='tel' placeholder='0912345678' name='tel' required='')
+          label(for='message')
+            b 詢問內容
+          textarea(name="message", cols="30", rows="10")
+          //- button.button-contact(type='submit') 送出
+          //- label
+          //-   input(type='checkbox' checked='checked' name='remember') 
+          //-   b Remember me
+        .container-contact
+          button.cancelbtn(type='button' onclick="document.getElementById('id01').style.display='none'") 送出
+          //- span.psw Forgot 
+          //-   a(href='#') password?
+    .aboutus-banner.mb-3  
+    .container 
+        ul.breadcrumb.mb-3 
+            li  
+                a(href="index.html") 首頁
+            li 
+                a(href="aboutus.html") &nbsp&nbsp 關於我們  
+    section.aboutus-section-1.page-top-position
+        .container 
+          .new-title 
+            h3 關於我們
+          .row.mb-2
+            .col-12.col-md-6.img-overlay 
+              img.img-95.im-fluid(src="../../img/aboutus-left.png", alt="")
+            .col-12.col-md-6
+              p.aboutus-title.itim-font.mb-1 FEEDME
+              p.aboutus-text.text-left.mb-1.green 是由 Feed 跟 Me 兩個字組成的，意思是「 餵我 」。
+              p.aboutus-text.text-left  當您的生活忙碌時，FEEDME 鮮食包可以為您的毛小孩提供一種美味、新鮮且健康的食品選擇，讓您的毛小孩期待每一餐。
+          .row
+            .col-12.col-md-6.img-overlay 
+              img.img-95.im-fluid(src="../../img/aboutus-right.png", alt="")
+            .col-12.col-md-6.order-md-1 
+              p.aboutus-title.text-left.mb-1  鮮食包
+              p.aboutus-text.text-left FEEDME 鮮食包 的特色在於由專業獸醫和營養師共同監督，確保每個配方都符合毛小孩的營養需求。我們選用最優質的食材，並且不含任何人工添加物或防腐劑，讓毛小孩吃到的是最自然、最健康的食品
+    section.aboutus-section-2 
+      .container 
+        .new-title 
+          h3 FEEDME專業團隊
+        ul.row.text-center 
+          li.col-12.col-md-4
+            img(src="../../img/doctor-1.png", alt="")
+            p.label
+            span.label-content 配方監督
+            .new-text
+              p.doctor-title Alexander
+              p 營養博士
+              p 擁有美國阿拉巴馬州奧本大學動物營養學博士學位，同時也是生物醫學科學的博士。他在新鮮食品領域具有豐富的經驗，是美國監督許多食譜的權威人物。除此之外，他還擔任了超過10年的寵物營養諮詢代表，為獸醫和寵物食品公司提供營養指導和食譜。他的專業領域涵蓋從綜合營養飲食到針對有醫療問題的寵物的治療飲食和飲食處方。
+          li.col-12.col-md-4
+            img(src="../../img/doctor-2.png", alt="")
+            p.label
+            span.label-content 配方監督
+            .new-text
+              p.doctor-title Yannick
+              p 獸醫
+              p Yannick畢業於密歇根州立大學獸醫學院，是一位獲得許可的獸醫和寵物營養師。在東京一家動物醫院擔任臨床獸醫期間，負責監督新鮮食品的食譜，以確保寵物得到最優質的營養和食品安全，我也非常注重動物的健康和福利，鼓勵主人採取最佳的養殖和飼養實踐，以保持寵物的健康和幸福。
+          li.col-12.col-md-4
+            img(src="../../img/doctor-3.png", alt="")
+            p.label
+            span.label-content 配方監督
+            .new-text
+              p.doctor-title Katherine
+              p 獸醫
+              p Katherine北卡羅來納州立大學獸醫學院，我曾在不同的獸醫診所和動物醫院實習和工作，擁有豐富的臨床經驗和對不同種類動物的照顧和治療技能，包括狗、貓、家禽、牛、馬和其他寵物。我致力於提供最優質的醫療服務和最完善的治療方案，同時也注重病人和主人的關係，始終關心並聆聽他們的需求和建議。
+           
+    footer
+        .container
+          //- .row-nowrap.col-12.flex-center
+          //-   a(href="")
+          //-     img.img-fluid(src="../../img/FeedMe_logo_white-05.png", alt="")
+          .row-nowrap.footer-list 
+            dl.col-12.col-md-3 
+              dt 
+                a(href="#") FEEDME  
+              dd 
+                a(href="aboutus.html") 關於我們
+              dd 
+                a(href="new.html") 最新消息
+            dl.col-12.col-md-3 
+              dt 
+                a(href="#") 全部商品  
+              dd 
+                a(href="dog.html") 狗狗鮮食
+              dd 
+                a(href="cat.html") 貓咪鮮食            
+            dl.col-12.col-md-3 
+              dd
+                a 客服時間:週一至週五 8:30-5:30 
+              dd
+                a 客服專線:(04) 2327-2522  
+              dd
+                a 聯絡信箱:FeedMe@gmail.com  
+            dl.col-12.col-md-3 
+              dt 
+                a(href="faq.html") FAQ 
+              dd 
+                a(href="faq.html") 常見問題
+              dd 
+                a(href="#") 購物須知
+            dl.col-12.col-md-3 
+              dt 
+                a 社群平台 
+              dd  
+                a(href="#")
+                  img(src="../../img/ig.png", alt="")
+                a(href="#")
+                  img(src="../../img/fb.png", alt="")
+                a(href="#")
+                  img(src="../../img/line.png", alt="")
+    a.page-top(href='javascript:;') TOP
+    script(src='https://code.jquery.com/jquery-3.6.0.min.js' integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=' crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js')
+    script(src='https://kit.fontawesome.com/99f06fddac.js' crossorigin='anonymous')
+    //- script(src='public/js/WOW-master/dist/wow.min.js')
+    script(src="../public/js/script.js") 
+
+
+
+
+ 
+         
+
+
+
+
+      
